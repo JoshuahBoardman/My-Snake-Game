@@ -1,8 +1,17 @@
 import { onSnake, getNewSegment } from "./snake.js";
 import {randomGridPosition} from "./grid.js";
 
+const score = document.getElementById("score-value");
+
 const GROWTH_RATE = 1;
 let food = randomFoodPosition();
+let currentScore = 0;
+
+function updateScore() {
+    currentScore += 1;
+    score.innerText = `${currentScore}`;
+}
+
 
 // checks to see if the random grid position is on the snake and if not it sets the next food locaton
 function randomFoodPosition() {
@@ -17,6 +26,7 @@ function randomFoodPosition() {
 export function updateFood() {
     if(onSnake(food)) {
         food = randomFoodPosition();
+        updateScore();
         getNewSegment(GROWTH_RATE);
     }
 };

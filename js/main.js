@@ -42,5 +42,4 @@ function isGameOver() {
   gameOver = (snakeOverlap() || outOfBoundsCheck(getSnakeHead()));
 };
 
-
 window.requestAnimationFrame(gameLoop);
