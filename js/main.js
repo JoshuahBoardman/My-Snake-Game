@@ -1,6 +1,7 @@
 import { SNAKE_SPEED, updateSnake, drawSnake, snakeOverlap, getSnakeHead} from "./snake.js";
 import { updateFood, drawFood} from "./food.js";
 import { outOfBoundsCheck } from "./grid.js";
+import { showGameOverMenu } from "./menu.js";
 
 const grid = document.getElementById("grid");
 
@@ -26,7 +27,7 @@ function draw() {
 // this updates everything about the game based on the snake speed (in this case every .5 secs)
 function gameLoop(timeStamp) {
     if (gameOver) {
-        alert("game over");
+        showGameOverMenu();
         return
     }
     timeSinceLastRender = (timeStamp - previousTime) / 1000;
