@@ -34,6 +34,7 @@ body {
     height: 75vmin;
     width: 75vmin;
     border-radius: .25rem;
+    font-size: 1rem;
 }
 
 .heading-wrapper {
@@ -62,6 +63,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.game-over-menu-header {
+    color: var(--primary-color-200);
+    font-size: 2rem;
+}
+
+.game-over-button:link, .game-over-button:visited {
+    display: inline-block;
+    text-align: center;
+    color: var(--primary-color-200);
+    background-color: var(--primary-color-800);
+    border-radius: .5rem;
+    text-decoration: none;
+    padding: 14px 25px;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.game-over-button:hover, .game-over-button:active {
+    background-color: var(--primary-color-600);
+  }
 
 .snake {
     background-color: var(--primary-color-600);
